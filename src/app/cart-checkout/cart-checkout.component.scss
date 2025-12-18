@@ -1,0 +1,45 @@
+.cart-item {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+.total {
+  font-size: 20px;
+  font-weight: bold;
+  margin-top: 20px;
+}
+
+.checkout-btn {
+  width: 100%;
+  padding: 12px;
+  background: #FF5722;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background 0.3s;
+
+  &:hover {
+    background: #E64A19;
+  }
+
+  &:active {
+    transform: scale(0.98);
+  }
+}
+
+.empty-cart {
+  text-align: center;
+  color: #888;
+  margin-top: 50px;
+}
+
+.delete-btn {
+  background: none;
+  border: none;
+  color: #FF5252;
+  cursor: pointer;
+  font-size: 14px;
+}

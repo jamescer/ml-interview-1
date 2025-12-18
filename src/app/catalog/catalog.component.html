@@ -1,0 +1,14 @@
+<div class="catalog-container">
+  <h2>Computer & Tech Shop</h2>
+
+  <div class="products-grid">
+    <div class="product-card" *ngFor="let product of availableProducts">
+      <div class="product-header">
+        <h3>{{ product.name }}</h3>
+        <span class="category">{{ product.category }}</span>
+      </div>
+      <div class="product-price">${{ product.price }}</div>
+      <button class="add-btn" (click)="addToCart(product)">Add to Cart</button>
+    </div>
+  </div>
+</div>

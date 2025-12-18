@@ -1,0 +1,23 @@
+<p>cart-checkout works!</p>
+<div>
+  <h2>Your Cart</h2>
+  <div *ngIf="cartService.getCartItems().length === 0">Your cart is empty.</div>
+  <div *ngIf="cartService.getCartItems().length > 0">
+    <div class="cart-item" *ngFor="let item of cartService.getCartItems()">
+      <div class="item-name">{{ item.name }}</div>
+      <div class="item-quantity">Quantity: {{ item.quantity }}</div>
+      <div class="item-price">Price: ${{ item.price }}</div>
+      <div class="delete-btn-section">
+        <button
+          type="button"
+          class="delete-btn"
+          (click)="cartService.removeFromCart(item.id)"
+        >
+          Remove
+        </button>
+      </div>
+    </div>
+    <div class="total">Total: ${{ cartService.getTotalPrice() }}</div>
+    <button class="checkout-btn">Checkout</button>
+  </div>
+</div>
